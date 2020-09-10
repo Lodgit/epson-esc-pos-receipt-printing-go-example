@@ -16,7 +16,7 @@ func Execute() {
 	address := strings.TrimSpace(os.Getenv("PRINTER_ADDRESS"))
 
 	if address == "" {
-		log.Fatal("Please provides printer address (host and port)")
+		log.Fatal("Please provide a valid printer address")
 	}
 
 	socket, err := net.Dial("tcp", address)
@@ -40,7 +40,7 @@ func Execute() {
 	p.Write("The quick brown fox jumps over the lazy dog")
 	p.Formfeed()
 
-	// Append a string to be printed using Western European encoding
+	// Append a string to be printed using `Western European` encoding
 	// which covers French, Spanish, Italian, Portuguese and German char-sets.
 	// For more details take a look at https://github.com/seer-robotics/escpos/pull/1
 	// a. Spanish sentence
