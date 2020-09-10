@@ -1,0 +1,7 @@
+release
+vendor
+*.log
+*.sum
+*.txt
+*.out
+**/.DS_Store
